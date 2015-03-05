@@ -9,6 +9,8 @@ declare module cw {
   export function t(): string; // timestamp
 
   export interface Log {
+    t(): string;
+
     trace(...args: any[]): void;
     debug(...args: any[]): void;
     info(...args: any[]): void;
