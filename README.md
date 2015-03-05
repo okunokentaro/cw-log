@@ -48,6 +48,7 @@ log.trace(cwlog.t(), 'with a timestamp', 42, {key: 'multiple arguments'});
 - `warn(...args)`
 - `error(...args)`
 - `fatal(...args)`
+- `t()`: string - an alias of static `t()` 
 
 ## Logging level
 such as [Log4j](http://logging.apache.org/log4j/2.x/).
@@ -59,6 +60,17 @@ such as [Log4j](http://logging.apache.org/log4j/2.x/).
 - 4: INFO
 - 5: DEBUG
 - 6: TRACE
+
+## for TypeScript
+When you use [dtsm](https://github.com/vvakame/dtsm), you can paste the following to `dtsm.json` and edit `ref`.
+
+```
+"cw-log/cw-log.d.ts": {
+  "repo": "https://github.com/armorik83/cw-log.git",
+  "ref": [latest commit hash],
+  "path": "cw-log.d.ts"
+}
+```
 
 ## Author
 - [OKUNOKENTARO](https://github.com/armorik83) aka armorik83
