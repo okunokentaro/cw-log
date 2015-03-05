@@ -1,8 +1,6 @@
 #cw-log
 
-[![Build Status][travis-image]][travis-url]
-[![NPM version][npm-image]][npm-url]
-[![License][license-image]][license-url]
+[![Build Status](https://travis-ci.org/armorik83/cw-log.svg)](https://travis-ci.org/armorik83/cw-log)
 
 `cw-log` is a simple and level controllable logger.
 
