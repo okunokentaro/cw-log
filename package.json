@@ -1,0 +1,43 @@
+{
+  "name": "cw-log",
+  "description": "A simple logger for console.",
+  "version": "0.1.0",
+  "author": {
+    "name": "OKUNOKENTARO",
+    "email": "okunokentaro@me.com",
+    "url": "https://github.com/armorik83"
+  },
+  "bugs": {
+    "url": "https://github.com/armorik83/cw-log/issues"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0",
+    "rewire": "^2.3.1",
+    "typescript": "1.4.1"
+  },
+  "homepage": "https://github.com/armorik83/cw-log",
+  "keywords": [
+    "console",
+    "debug",
+    "log",
+    "logger"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js",
+    "lib",
+    "LICENSE",
+    "package.json",
+    "README.md",
+    "test"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://armorik83@github.com/armorik83/cw-log.git"
+  },
+  "scripts": {
+    "build": "tsc src/log.ts --target es5 --module commonjs --outDir lib",
+    "test": "mocha test/*-spec.js"
+  }
+}
