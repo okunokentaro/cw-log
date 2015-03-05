@@ -31,6 +31,10 @@ module cw {
     error = this.logging(2);
     fatal = this.logging(1);
 
+    t() {
+      return Log.t();
+    }
+
     static t() {
       return new Date().toISOString() + ' |';
     }

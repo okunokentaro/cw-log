@@ -143,4 +143,32 @@ describe('cw.Log', function() {
       assert(virtualLog.length === 0);
     });
   });
+
+  describe('timestamp', function() {
+    beforeEach(function () {
+      virtualLog = [];
+      var logger = cwlog.logger(5);
+      logger.debug(logger.t());
+    });
+
+    it('should output a timestamp', function() {
+      var timestamp = virtualLog[0][0];
+      assert(timestamp.slice(0, 1) === '2'); // the 1st letter of 20XX
+      assert(timestamp.slice(timestamp.length - 3) === 'Z |');
+    });
+  });
+
+  describe('static timestamp', function() {
+    beforeEach(function () {
+      virtualLog = [];
+      var logger = cwlog.logger(5);
+      logger.debug(cwlog.t());
+    });
+
+    it('should output a timestamp', function() {
+      var timestamp = virtualLog[0][0];
+      assert(timestamp.slice(0, 1) === '2'); // the 1st letter of 20XX
+      assert(timestamp.slice(timestamp.length - 3) === 'Z |');
+    });
+  });
 });
