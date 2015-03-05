@@ -12,19 +12,23 @@ $npm install cw-log --save
 
 For node.
 
-```
+```js
 var log = require('cw-log').logger(6);
 ```
 
-For a browser.
+For a browser. (use `/lib/log.js`)
 
+```html
+<script src="/path/to/log.js"></script>
 ```
+
+```js
 var log = cwlog.logger(6);
 ```
 
 Usage.
 
-```
+```js
 log.trace('the message');
 log.fatal('a serious notice');
 
@@ -34,19 +38,19 @@ log.trace(cwlog.t(), 'with a timestamp', 42, {key: 'multiple arguments'});
 ## API
 
 **static cwlog**
-- logger(level: number\[0-6\]): Logger instance
-- t(): string - The ISO timestamp
+- `logger(level: number\[0-6\])`: Logger instance
+- `t()`: string - The ISO timestamp
 
 **Logger instance**
-- trace(...args)
-- debug(...args)
-- info(...args)
-- warn(...args)
-- error(...args)
-- fatal(...args)
+- `trace(...args)`
+- `debug(...args)`
+- `info(...args)`
+- `warn(...args)`
+- `error(...args)`
+- `fatal(...args)`
 
 ## Logging level
-such as Log4J.
+such as [Log4j](http://logging.apache.org/log4j/2.x/).
 
 - 0: OFF
 - 1: FATAL
